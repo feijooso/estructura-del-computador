@@ -1,0 +1,20 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+        double n_float64;
+        float n_float;
+        uint64_t n_64;
+        uint32_t n_32;
+
+        n_float= +4.75;
+        n_float64= -4.75;
+                memcpy ((void*) &n_32, (void*) &n_float,  sizeof(uint32_t) );
+                memcpy ((void*) &n_64, (void*) &n_float64,  sizeof(uint64_t) );
+        printf( "%04x\n", n_32);
+        printf( "%04lx\n", n_64);
+        
+        return 0;
+}
